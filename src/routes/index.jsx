@@ -5,9 +5,11 @@ import Categories from "~/pages/categories";
 import Contact from "~/pages/contact";
 import Home from "~/pages/home";
 import LastPost from "~/pages/lastPost";
+import Login from "~/pages/login";
 import NewPost from "~/pages/newPost";
 import NotFound from "~/pages/notFound";
 import PopulerPost from "~/pages/populerPost";
+import Register from "~/pages/register";
 
 
 
@@ -43,6 +45,14 @@ const routes =createBrowserRouter([
             {
                 path:'/lastPost',
                 element:<LastPost />
+            },
+            {
+                path:'/login',
+                element:<Login />
+            },
+            {
+                path:'/register',
+                element:<Register />
             },
             {
                 path:'/*',

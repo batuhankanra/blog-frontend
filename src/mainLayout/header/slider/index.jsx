@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Slider() {
   return (
-    <div className='relative overflow-hidden min-h-[550px] min-w-[650px] bg-gray-100 flex items-center justify-center duration-200 '>
+    <div className='relative overflow-hidden min-h-[650px] min-w-full bg-gray-100 flex items-center justify-center duration-200 '>
         {/*background pattern */}
-      <div className='h-[700px] w-[700px] bg-secondary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 z-9 '>
+      <div className='sm:h-[700px] sm:w-[700px] bg-secondary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 z-9 '>
       </div>
       {/*slider */}
       <div className='container pb-8 sm:pb-0'>
