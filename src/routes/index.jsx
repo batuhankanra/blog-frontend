@@ -10,6 +10,8 @@ import NewPost from "~/pages/newPost";
 import NotFound from "~/pages/notFound";
 import PopulerPost from "~/pages/populerPost";
 import Register from "~/pages/register";
+import ProtectedRoute from "./ProtectedRoute";
+import RedirectIfAuthenticated from "./RedirectIfAuthenticated";
 
 
 
@@ -36,7 +38,9 @@ const routes =createBrowserRouter([
             },
             {
                 path:'/newPost',
-                element:<NewPost />
+                element:(
+                <ProtectedRoute ><NewPost/> </ProtectedRoute>
+                )
             },
             {
                 path:'/populerPost',
@@ -48,7 +52,11 @@ const routes =createBrowserRouter([
             },
             {
                 path:'/login',
-                element:<Login />
+                element:(
+                <RedirectIfAuthenticated>
+                    <Login />
+                </RedirectIfAuthenticated>
+                )
             },
             {
                 path:'/register',

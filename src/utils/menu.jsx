@@ -30,6 +30,11 @@ const menu=[
         id:6,
         name:'Son Postlar',
         link:'/lastPost'
+    },
+    {
+        id:7,
+        name:'Post yaz',
+        link:'/newPost'
     }
 ]
 export default menu
