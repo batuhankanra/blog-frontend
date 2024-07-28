@@ -40,7 +40,10 @@ export default function UpperHeader() {
                  </PopoverPanel>
                </Popover>
                ) : (
-                <Link to='/login' className='text-lg font-semibold hover:bg-fourth py-1 px-2 rounded-md transition-colors duration-300 '>Giris Yap</Link>
+                <div className='flex items-center justify-center gap-x-1'>
+                  <Link to='/login' className='text-lg font-semibold hover:bg-fourth py-1 px-2 rounded-md transition-colors duration-300 '>Giris Yap</Link>
+                  <Link to='/register' className='text-lg font-semibold hover:bg-fourth py-1 px-2 rounded-md transition-colors duration-300 '>Kayit Ol</Link>
+                </div>
                )}
             </div>
         </div>

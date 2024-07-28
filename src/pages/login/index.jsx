@@ -56,7 +56,9 @@ export default function Login() {
             <input type="password" value={password} onChange={e=>setPassword(e.target.value)} className='outline-none px-2 py-1 w-full rounded-md text-lg bg-gray-100 focus:bg-white' />
             <Link to='/forgotmypassword' className='text-right text-sm text-blue-700 underline'>Sifremi Unuttum</Link>
             <button type='submit' className='bg-gray-300 py-2 text-white rounded-xl hover:bg-gray-600 transition-colors duration-200'>Giris Yap</button>
+            <span className='py-2 text-sm'>kayit olmak icin <Link className='text-blue-600' to={'/register'} >tiklayiniz</Link></span>
         </form>
+        
       </div>
     </div>
   )
