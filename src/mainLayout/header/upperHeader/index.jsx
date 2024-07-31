@@ -17,7 +17,6 @@ export default function UpperHeader() {
 
   }
   
-  console.log(user)
   return (
     <div className='relative duration-200 z-40 shadow-md bg-gradient-to-r from-fourth to-fifth py-3'>
         <div className='container flex items-center justify-between mx-auto'>
