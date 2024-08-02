@@ -5,8 +5,6 @@ import axios from 'axios'
 
 export default function Blog() {
     const [blog,setBlog]=useState('')
-    console.log(blog)
- ;
     
     useEffect(() => {
         const fetchPosts = async () => {
@@ -19,6 +17,8 @@ export default function Blog() {
                 ...post,
                 date: convertToTRDate(post.date)
               }));
+              const sortedPosts = postsWithTRDates.sort((a, b) => new Date(b.date) - new Date(a.date));
+              console.log(sortedPosts);
               setBlog(postsWithTRDates)
 
           } catch (err) {
@@ -37,9 +37,9 @@ export default function Blog() {
                     <div key={data._id} className='flex flex-col  py-2  border-b  m-3'>
                     <div className='flex items-center justify-between '>
                         <h1 className='font-semibold text-lg'>{data.title}</h1>
-                        <span className='text-sm text-gray-500'>{data.date}</span>
+                        <span className='text-sm text-gray-500 '>{data.date}</span>
                     </div>
-                    <p>{data.desc} </p>
+                    <p className='break-words mr-2 '>{data.desc} </p>
                     <div className='flex items-center gap-3 py-2'>
                         <img src={ppimg} className='w-20 object-cover h-20 rounded-full'  />
                         <h1 className='text-base font-medium underline'>{data.username}</h1>
