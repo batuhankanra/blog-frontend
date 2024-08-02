@@ -10,10 +10,11 @@ import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
 export default function UpperHeader() {
   const {user}=useSelector(state=>state.auth)
   const dispatch =useDispatch()
+  const navigate=useNavigate()
 
   const logoutHandle=()=>{
     dispatch(_logout())
-    useNavigate('/')
+    navigate('/')
 
   }
   
@@ -34,7 +35,7 @@ export default function UpperHeader() {
                  <PopoverPanel anchor="bottom"  className="flex flex-col absolute z-50  gap-2 bg-white px-4 rounded-lg text-lg font-medium transition-colors duration-200 py-2">
                    <Link className='hover:bg-gray-200 p-1 rounded-md' to={'/profile'}>Profil Duzenle</Link>
                    <Link className='hover:bg-gray-200 p-1 rounded-md' to={'/newPost'}>Yeni Post yaz</Link>
-                   <Link className='hover:bg-gray-200 p-1 rounded-md' to={'/myPost'}>Gonderilerim</Link>
+                   <Link className='hover:bg-gray-200 p-1 rounded-md' to={'/myBlog'}>Gonderilerim</Link>
                    <button onClick={logoutHandle} className='hover:bg-gray-200 p-1 rounded-md' >Cikis </button>
                  </PopoverPanel>
                </Popover>

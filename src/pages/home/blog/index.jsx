@@ -10,6 +10,7 @@ export default function Blog() {
         const fetchPosts = async () => {
           try {
             const response = await axios.get('http://localhost:3000/api/product/viewBlog');
+            
             const convertToTRDate =(isoDate)=>{
                 return new Date(isoDate).toLocaleString('tr-TR', { timeZone: 'Europe/Istanbul' });
             }
@@ -17,8 +18,8 @@ export default function Blog() {
                 ...post,
                 date: convertToTRDate(post.date)
               }));
-              const sortedPosts = postsWithTRDates.sort((a, b) => new Date(b.date) - new Date(a.date));
-              console.log(sortedPosts);
+              
+              convertToTRDate(response.data.posts)
               setBlog(postsWithTRDates)
 
           } catch (err) {

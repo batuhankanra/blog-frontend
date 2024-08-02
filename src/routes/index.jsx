@@ -12,6 +12,7 @@ import PopulerPost from "~/pages/populerPost";
 import Register from "~/pages/register";
 import ProtectedRoute from "./ProtectedRoute";
 import RedirectIfAuthenticated from "./RedirectIfAuthenticated";
+import MyBlog from "~/pages/myBlog";
 
 
 
@@ -40,6 +41,12 @@ const routes =createBrowserRouter([
                 path:'/newPost',
                 element:(
                 <ProtectedRoute ><NewPost/> </ProtectedRoute>
+                )
+            },
+            {
+                path:'/myBlog',
+                element:(
+                <ProtectedRoute ><MyBlog/> </ProtectedRoute>
                 )
             },
             {
